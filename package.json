@@ -1,0 +1,22 @@
+{
+  "name": "ehawk82-tictactoe",
+  "version": "1.0.0",
+  "description": "client 1v1 tictacttoe\u001b[D\u001b[D\u001b[\u001b[\u001b[C\u001b[C\u001b[toe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ehawk82/Ehawk82-TicTacToe.git"
+  },
+  "author": "Ehawk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ehawk82/Ehawk82-TicTacToe/issues"
+  },
+  "homepage": "https://github.com/Ehawk82/Ehawk82-TicTacToe#readme",
+  "dependencies": {
+    "gscript2020": "git+https://github.com/Ehawk82/gScript2020.git"
+  }
+}
