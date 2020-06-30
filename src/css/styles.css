@@ -4,28 +4,43 @@ html, body {
 	margin:0;
 	padding:0;
 }
+
+body {
+	text-align: center;
+	font-size: 100px;
+	
+}
+
 td {
 	display: inline-grid;
 	width: 100px;
 	text-align: center;
 	line-height:100px;
-	font-size: 100px;
 	font-family: Comic Sans MS;
 	color:black;
+	cursor:pointer;
 }
 
-td:hover {
-	background-color: grey;
+table {
+	margin-top: 20px;
+	display: inline-block;
+	padding: 1px;
 }
+
 table, tr {
 	background-color: black;
-	margin:2px;
 }
+
+tr {
+	display: flex;
+	margin:0;
+}
+
 td {
 	background-color: white;
-	margin:2px;
-	padding: 2px;
+	margin:1px;
 }
+
 /*ID*/
 
 /*CLASS*/
