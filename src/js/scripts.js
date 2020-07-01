@@ -1,4 +1,4 @@
-var myUI,player = 1,winStatus = false,cellCount = 9;
+var myUI,player = "X",winStatus = false,cellCount = 9;
 
 myUI = {
 	init: function(){
@@ -9,7 +9,7 @@ myUI = {
 		var table = createEle("table"), playerLabel;
 
 		playerLabel = createEle("p");
-		playerLabel.innerHTML = "Player " +player + "'s turn";
+		playerLabel.innerHTML = player + " turn";
 
 		for (var r = 0; r < 3; r++) {
 			var tr = createEle("tr"), j = r + 1;
@@ -32,17 +32,17 @@ myUI = {
 	boxSelect: function(td,playerLabel){
 		return function(){
 
-			if(player === 1){
+			if(player === "X"){
 				td.innerHTML = "X";
 				td.onclick = null;
-				player = 2;
-				playerLabel.innerHTML = "Player " +player + "'s turn";
+				player = "O";
+				playerLabel.innerHTML = player + " turn";
 				var tds = bySelAll("td");
-			} else if(player === 2){
+			} else if(player === "O"){
 				td.innerHTML = "O";
 				td.onclick = null;
-				player = 1;
-				playerLabel.innerHTML = "Player " +player + "'s turn";
+				player = "X";
+				playerLabel.innerHTML = player + " turn";
 				var tds = bySelAll("td");
 			}
 			
@@ -130,11 +130,11 @@ myUI = {
 		}
 
 		/* tie game */
-		for (var n = 0; n < tds.length; n++) {
-			if(cellCount === 0 && winStatus === false){
-				myUI.tieGame();
-			};
-		}
+
+		if(cellCount === 0 && winStatus === false){
+			myUI.tieGame();
+		};
+		
 		
 		
 	},
@@ -146,7 +146,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "PLAYER ONE HAS ONE THIS ROUND!";
+		blokker.innerHTML = "X WINS";
 		blokker.append(btnOver);
 
 		body.append(blokker);
@@ -159,7 +159,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "PLAYER TW0 HAS ONE THIS ROUND!";
+		blokker.innerHTML = "O WINS";
 		blokker.append(btnOver);
 
 		body.append(blokker);
