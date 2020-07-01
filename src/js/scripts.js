@@ -1,7 +1,8 @@
-var myUI,player = 1;
+var myUI,player = 1,winStatus = false,cellCount = 9;
 
 myUI = {
 	init: function(){
+		
 		setTimeout(function(){myUI.loadout()},1); 
 	},
 	loadout: function(){
@@ -49,75 +50,93 @@ myUI = {
 		}
 	},
 	evalBoard: function(tds){
+		--cellCount;
+		console.log(cellCount);
 		/* X row wins */
 		if (tds[0].innerHTML === "X" && tds[1].innerHTML === "X" && tds[2].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 		if (tds[3].innerHTML === "X" && tds[4].innerHTML === "X" && tds[5].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 		if (tds[6].innerHTML === "X" && tds[7].innerHTML === "X" && tds[8].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 
 		/* X col wins */
 		if (tds[0].innerHTML === "X" && tds[3].innerHTML === "X" && tds[6].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 		if (tds[1].innerHTML === "X" && tds[4].innerHTML === "X" && tds[7].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 		if (tds[2].innerHTML === "X" && tds[5].innerHTML === "X" && tds[8].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 
 		/* X diag wins */
 		if (tds[0].innerHTML === "X" && tds[4].innerHTML === "X" && tds[8].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 		if (tds[2].innerHTML === "X" && tds[4].innerHTML === "X" && tds[6].innerHTML === "X" ) {
 			myUI.xWin();
+			winStatus = true;
 		}
 
 		/* O row wins */
 		if (tds[0].innerHTML === "O" && tds[1].innerHTML === "O" && tds[2].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 
 		if (tds[3].innerHTML === "O" && tds[4].innerHTML === "O" && tds[5].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 		if (tds[6].innerHTML === "O" && tds[7].innerHTML === "O" && tds[8].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 
 		/* O col wins */
 		if (tds[0].innerHTML === "O" && tds[3].innerHTML === "O" && tds[6].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 		if (tds[1].innerHTML === "O" && tds[4].innerHTML === "O" && tds[7].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 		if (tds[2].innerHTML === "O" && tds[5].innerHTML === "O" && tds[8].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 
 		/* O diag wins */
 		if (tds[0].innerHTML === "O" && tds[4].innerHTML === "O" && tds[8].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 		if (tds[2].innerHTML === "O" && tds[4].innerHTML === "O" && tds[6].innerHTML === "O" ) {
 			myUI.oWin();
+			winStatus = true;
 		}
 
 		/* tie game */
-		for (var b = 0; b < tds.length; b++) {
-			if(tds[b].innerHTML === "&nbsp;"){
-				if(!tds[b]){
-					console.log(b);
-				}
+		for (var n = 0; n < tds.length; n++) {
+			if(cellCount === 0 && winStatus === false){
+				myUI.tieGame();
 			};
 		}
+		
+		
 	},
 	xWin: function(){
 		var blokker = createEle("div"),
