@@ -8,7 +8,7 @@ html, body {
 body {
 	text-align: center;
 	font-size: 100px;
-	
+
 }
 
 td {
@@ -44,5 +44,13 @@ td {
 /*ID*/
 
 /*CLASS*/
+.blokker {
+	position: fixed;
+	display: grid;
+	top:0;
+	background-color: white;
+	height: 100vh;
+	width: 100vw;
+}
 
 /*MULTI*/

@@ -51,63 +51,116 @@ myUI = {
 	evalBoard: function(tds){
 		/* X row wins */
 		if (tds[0].innerHTML === "X" && tds[1].innerHTML === "X" && tds[2].innerHTML === "X" ) {
-			alert("X's WIN 012");
+			myUI.xWin();
 		}
 		if (tds[3].innerHTML === "X" && tds[4].innerHTML === "X" && tds[5].innerHTML === "X" ) {
-			alert("X's WIN 345");
+			myUI.xWin();
 		}
 		if (tds[6].innerHTML === "X" && tds[7].innerHTML === "X" && tds[8].innerHTML === "X" ) {
-			alert("X's WIN 678");
+			myUI.xWin();
 		}
 
 		/* X col wins */
 		if (tds[0].innerHTML === "X" && tds[3].innerHTML === "X" && tds[6].innerHTML === "X" ) {
-			alert("X's WIN 036");
+			myUI.xWin();
 		}
 		if (tds[1].innerHTML === "X" && tds[4].innerHTML === "X" && tds[7].innerHTML === "X" ) {
-			alert("X's WIN 147");
+			myUI.xWin();
 		}
 		if (tds[2].innerHTML === "X" && tds[5].innerHTML === "X" && tds[8].innerHTML === "X" ) {
-			alert("X's WIN 258");
+			myUI.xWin();
 		}
 
 		/* X diag wins */
 		if (tds[0].innerHTML === "X" && tds[4].innerHTML === "X" && tds[8].innerHTML === "X" ) {
-			alert("X's WIN 048");
+			myUI.xWin();
 		}
 		if (tds[2].innerHTML === "X" && tds[4].innerHTML === "X" && tds[6].innerHTML === "X" ) {
-			alert("X's WIN 246");
+			myUI.xWin();
 		}
 
 		/* O row wins */
 		if (tds[0].innerHTML === "O" && tds[1].innerHTML === "O" && tds[2].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
 		}
 
 		if (tds[3].innerHTML === "O" && tds[4].innerHTML === "O" && tds[5].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
 		}
 		if (tds[6].innerHTML === "O" && tds[7].innerHTML === "O" && tds[8].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
 		}
 
 		/* O col wins */
 		if (tds[0].innerHTML === "O" && tds[3].innerHTML === "O" && tds[6].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
 		}
 		if (tds[1].innerHTML === "O" && tds[4].innerHTML === "O" && tds[7].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
 		}
 		if (tds[2].innerHTML === "O" && tds[5].innerHTML === "O" && tds[8].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
 		}
 
 		/* O diag wins */
 		if (tds[0].innerHTML === "O" && tds[4].innerHTML === "O" && tds[8].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
 		}
 		if (tds[2].innerHTML === "O" && tds[4].innerHTML === "O" && tds[6].innerHTML === "O" ) {
-			alert("O's WIN");
+			myUI.oWin();
+		}
+
+		/* tie game */
+		for (var b = 0; b < tds.length; b++) {
+			if(tds[b].innerHTML === "&nbsp;"){
+				if(!tds[b]){
+					console.log(b);
+				}
+			};
+		}
+	},
+	xWin: function(){
+		var blokker = createEle("div"),
+			btnOver = createEle("button");
+
+		btnOver.innerHTML = "PLAY AGAIN!"
+		btnOver.onclick = myUI.restart();
+
+		blokker.className = "blokker";
+		blokker.innerHTML = "PLAYER ONE HAS ONE THIS ROUND!";
+		blokker.append(btnOver);
+
+		body.append(blokker);
+	},
+	oWin: function(){
+		var blokker = createEle("div"),
+			btnOver = createEle("button");
+
+		btnOver.innerHTML = "PLAY AGAIN!"
+		btnOver.onclick = myUI.restart();
+
+		blokker.className = "blokker";
+		blokker.innerHTML = "PLAYER TW0 HAS ONE THIS ROUND!";
+		blokker.append(btnOver);
+
+		body.append(blokker);
+	},
+	tieGame: function(){
+		var blokker = createEle("div"),
+			btnOver = createEle("button");
+
+		btnOver.innerHTML = "PLAY AGAIN!";
+		btnOver.onclick = myUI.restart();
+
+		blokker.className = "blokker";
+		blokker.innerHTML = "TIED!";
+		blokker.append(btnOver);
+
+		body.append(blokker);
+	},
+	restart: function(){
+		return function(){
+			location.reload();
 		}
 	}
 };
