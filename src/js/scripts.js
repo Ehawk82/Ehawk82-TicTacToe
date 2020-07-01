@@ -2,13 +2,12 @@ var myUI,player = "X",winStatus = false,cellCount = 9;
 
 myUI = {
 	init: function(){
-		
 		setTimeout(function(){myUI.loadout()},1); 
 	},
 	loadout: function(){
 		var table = createEle("table"), playerLabel;
 
-		playerLabel = createEle("p");
+		playerLabel = createEle("div");
 		playerLabel.innerHTML = player + " turn";
 
 		for (var r = 0; r < 3; r++) {
@@ -146,7 +145,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "X WINS";
+		blokker.innerHTML = "<p>X WINS</p>";
 		blokker.append(btnOver);
 
 		body.append(blokker);
@@ -159,7 +158,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "O WINS";
+		blokker.innerHTML = "<p>O WINS</p>";
 		blokker.append(btnOver);
 
 		body.append(blokker);
@@ -172,7 +171,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "TIED!";
+		blokker.innerHTML = "<p>TIED!</p>";
 		blokker.append(btnOver);
 
 		body.append(blokker);

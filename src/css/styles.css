@@ -4,6 +4,7 @@ html, body {
 	margin:0;
 	padding:0;
 	font-size: 100px;
+	font-family: Comic Sans MS;
 }
 
 body {
@@ -12,7 +13,8 @@ body {
 
 }
 button {
-	font-size: 100px;
+	font-size: 80px;
+	font-family: Comic Sans MS;
 }
 
 td {
@@ -20,7 +22,6 @@ td {
 	width: 100px;
 	text-align: center;
 	line-height:100px;
-	font-family: Comic Sans MS;
 	color:black;
 	cursor:pointer;
 }
