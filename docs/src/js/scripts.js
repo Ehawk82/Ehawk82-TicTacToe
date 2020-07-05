@@ -5,16 +5,16 @@ myUI = {
 		setTimeout(function(){myUI.loadout()},1); 
 	},
 	loadout: function(){
-		var table = createEle("table"), playerLabel;
+		var table = document.createElement("table"), playerLabel;
 
-		playerLabel = createEle("div");
+		playerLabel = document.createElement("div");
 		playerLabel.innerHTML = player + " turn";
 
 		for (var r = 0; r < 3; r++) {
-			var tr = createEle("tr"), j = r + 1;
+			var tr = document.createElement("tr"), j = r + 1;
 
 			for (var c = 0; c < 3; c++) {
-				var td = createEle("td"),d = c + 1;
+				var td = document.createElement("td"),d = c + 1;
 
 				td.innerHTML = "&nbsp;";
 				td.onclick = myUI.boxSelect(td,playerLabel);
@@ -36,13 +36,13 @@ myUI = {
 				td.onclick = null;
 				player = "O";
 				playerLabel.innerHTML = player + " turn";
-				var tds = bySelAll("td");
+				var tds = document.querySelectorAll("td");
 			} else if(player === "O"){
 				td.innerHTML = "O";
 				td.onclick = null;
 				player = "X";
 				playerLabel.innerHTML = player + " turn";
-				var tds = bySelAll("td");
+				var tds = document.querySelectorAll("td");
 			}
 			
 			myUI.evalBoard(tds);
@@ -138,8 +138,8 @@ myUI = {
 		
 	},
 	xWin: function(){
-		var blokker = createEle("div"),
-			btnOver = createEle("button");
+		var blokker = document.createElement("div"),
+			btnOver = document.createElement("button");
 
 		btnOver.innerHTML = "PLAY AGAIN!"
 		btnOver.onclick = myUI.restart();
@@ -151,8 +151,8 @@ myUI = {
 		body.append(blokker);
 	},
 	oWin: function(){
-		var blokker = createEle("div"),
-			btnOver = createEle("button");
+		var blokker = document.createElement("div"),
+			btnOver = document.createElement("button");
 
 		btnOver.innerHTML = "PLAY AGAIN!"
 		btnOver.onclick = myUI.restart();
@@ -164,8 +164,8 @@ myUI = {
 		body.append(blokker);
 	},
 	tieGame: function(){
-		var blokker = createEle("div"),
-			btnOver = createEle("button");
+		var blokker = document.createElement("div"),
+			btnOver = document.createElement("button");
 
 		btnOver.innerHTML = "PLAY AGAIN!";
 		btnOver.onclick = myUI.restart();
