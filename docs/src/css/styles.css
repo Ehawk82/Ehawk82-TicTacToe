@@ -4,7 +4,6 @@ html, body {
 	margin:0;
 	padding:0;
 	font-size: 100px;
-	font-family: "Comic", Sans;
 }
 
 body {
@@ -14,11 +13,10 @@ body {
 }
 button {
 	font-size: 150px;
-	font-family: "Comic", Sans;
 }
 
 td {
-	display: inline-grid;
+	display: table-cell;
 	width: 150px;
 	text-align: center;
 	line-height:150px;
@@ -28,7 +26,8 @@ td {
 
 table {
 	margin-top: 20px;
-	display: inline-block;
+	margin-left: calc(50vw - 235px);
+	display: table;
 	padding: 1px;
 }
 
