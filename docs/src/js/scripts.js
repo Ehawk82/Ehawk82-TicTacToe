@@ -21,17 +21,19 @@ myUI = {
 	init: function(){
 		setTimeout(function(){myUI.loadout()},1); 
 	},
+	creEle: function(x) {return document.createElement(x) },
+	bySelAll: function(x) {return document.querySelectorAll(x) },
 	loadout: function(){
-		var table = document.createElement("table"), playerLabel;
+		var table = myUI.creEle("table"), playerLabel;
 
-		playerLabel = document.createElement("div");
+		playerLabel = myUI.creEle("div");
 		playerLabel.innerHTML = player + " turn";
 
 		for (var r = 0; r < 3; r++) {
-			var tr = document.createElement("tr"), j = r + 1;
+			var tr = myUI.creEle("tr"), j = r + 1;
 
 			for (var c = 0; c < 3; c++) {
-				var td = document.createElement("td"),d = c + 1;
+				var td = myUI.creEle("td"),d = c + 1;
 
 				td.innerHTML = "&nbsp;";
 				td.onclick = myUI.boxSelect(td,playerLabel);
@@ -52,13 +54,13 @@ myUI = {
 				td.onclick = null;
 				player = "O";
 				playerLabel.innerHTML = player + " turn";
-				var tds = document.querySelectorAll("td");
+				var tds = myUI.bySelAll("td");
 			} else if(player === "O"){
 				td.innerHTML = "O";
 				td.onclick = null;
 				player = "X";
 				playerLabel.innerHTML = player + " turn";
-				var tds = document.querySelectorAll("td");
+				var tds = myUI.bySelAll("td");
 			}
 			
 			myUI.evalBoard(tds);
@@ -82,8 +84,8 @@ myUI = {
 		};
 	},
 	xWin: function(){
-		var blokker = document.createElement("div"),
-			btnOver = document.createElement("button");
+		var blokker = myUI.creEle("div"),
+			btnOver = myUI.creEle("button");
 
 		btnOver.innerHTML = "PLAY AGAIN!"
 		btnOver.onclick = myUI.restart();
@@ -95,8 +97,8 @@ myUI = {
 		body.append(blokker);
 	},
 	oWin: function(){
-		var blokker = document.createElement("div"),
-			btnOver = document.createElement("button");
+		var blokker = myUI.creEle("div"),
+			btnOver = myUI.creEle("button");
 
 		btnOver.innerHTML = "PLAY AGAIN!"
 		btnOver.onclick = myUI.restart();
@@ -108,8 +110,8 @@ myUI = {
 		body.append(blokker);
 	},
 	tieGame: function(){
-		var blokker = document.createElement("div"),
-			btnOver = document.createElement("button");
+		var blokker = myUI.creEle("div"),
+			btnOver = myUI.creEle("button");
 
 		btnOver.innerHTML = "PLAY AGAIN!";
 		btnOver.onclick = myUI.restart();
