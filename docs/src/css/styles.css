@@ -1,6 +1,7 @@
 /*dom*/
 body {
-	font-family: "Comic Sans MS";
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 500;
 }
 html, body {
 	margin:0;
