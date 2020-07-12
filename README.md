@@ -28,7 +28,7 @@
 [Back to top](#Tic-Tac-Toe)
 ## Deployment
 - [x] Win 10
-- [ ] Win 10 mobile
+- ![ ] Win 10 mobile
 - [x] Android mobile
 - [ ] Chromebook
 - [x] iPhone
