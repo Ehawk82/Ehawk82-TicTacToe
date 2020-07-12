@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 - A Standard Tic Tac Toe Game in JS/html
 
-# Table of Contents
+- Table of Contents
 * [Development](#development)
 * [Deployment](#deployment)
 * [Theme](#theme)
