@@ -40,12 +40,13 @@ myUI = {
 		playerLabel.innerHTML = player + " turn";
 
 		for (var r = 0; r < 3; r++) {
-			var tr = myUI.creEle("tr"), j = r + 1;
+			var tr = myUI.creEle("tr");
 
 			for (var c = 0; c < 3; c++) {
-				var td = myUI.creEle("td"),d = c + 1;
+				var td = myUI.creEle("td");
 
 				td.innerHTML = "&nbsp;";
+
 				td.onclick = myUI.boxSelect(td,playerLabel);
 
 				tr.append(td);
@@ -78,6 +79,7 @@ myUI = {
 	},
 	evalBoard: function(tds){
 		--cellCount;
+	
 		/* X row wins */
 		myUI.r1x(tds);
 		myUI.r2x(tds);
@@ -109,7 +111,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "<p>X WINS</p>";
+		blokker.innerHTML = "<p>X WIN</p>";
 		blokker.append(btnOver);
 
 		body.append(blokker);
@@ -122,7 +124,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "<p>O WINS</p>";
+		blokker.innerHTML = "<p>O WIN</p>";
 		blokker.append(btnOver);
 
 		body.append(blokker);
