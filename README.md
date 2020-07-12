@@ -5,9 +5,15 @@
 * [Development](#development)
 * [Deployment](#deployment)
 * [Theme](#theme)
+* [Miscellaneous](#miscellaneous)
+* [Open Discussion](#discussion)
 * [Status](#status)
 
 ## Development
+- [ ] Sounds
+  + [ ] Box Select
+  + [ ] Victory sound for X
+  + [ ] Victory sound for O
 - [ ] Leaderboard
 - [x] End-game screen
   - [x] restart button
@@ -28,7 +34,17 @@
 ## Theme
 - [ ] Responsive CSS
 - [ ] Color selection
-- [X] Plain template
+- [x] Plain template
+- [ ] Graphics
+
+## Miscellaneous
+- [ ] Donation button
+- [ ] Credits page
+- [ ] Splash screen
+- [ ] Ads
+
+## Open Discussion {#discussion}
+- Discussion announcements will be placed here
 
 ## Status
-![Progress](https://progress-bar.dev/2/)
+![Progress](https://progress-bar.dev/3/)
