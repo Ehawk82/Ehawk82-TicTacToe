@@ -9,7 +9,7 @@
 * [Open Discussion](#open-discussion)
 * [Status](#status)
 
-[Back to top](#table-of-contents)
+[Back to top](#Tic-Tac-Toe)
 ## Development
 - [ ] Sounds
   + [ ] Box Select
@@ -25,7 +25,7 @@
 - [ ] One player vs AI
 - [x] One player vs Two player
 
-[Back to top](#table-of-contents)
+[Back to top](#Tic-Tac-Toe)
 ## Deployment
 - [x] Win 10
 - [ ] Win 10 mobile
@@ -33,26 +33,26 @@
 - [ ] Chromebook
 - [x] iPhone
 
-[Back to top](#table-of-contents)
+[Back to top](#Tic-Tac-Toe)
 ## Theme
 - [ ] Responsive CSS
 - [ ] Color selection
 - [x] Plain template
 - [ ] Graphics
 
-[Back to top](#table-of-contents)
+[Back to top](#Tic-Tac-Toe)
 ## Miscellaneous
 - [ ] Donation button
 - [ ] Credits page
 - [ ] Splash screen
 - [ ] Ads
 
-[Back to top](#table-of-contents)
+[Back to top](#Tic-Tac-Toe)
 ## Open Discussion
 - Discussion announcements will be placed here
 
-[Back to top](#table-of-contents)
+[Back to top](#Tic-Tac-Toe)
 ## Status
 ![Progress](https://progress-bar.dev/3/)
 
-[Back to top](#table-of-contents)
+[Back to top](#Tic-Tac-Toe)
