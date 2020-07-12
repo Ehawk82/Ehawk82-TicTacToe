@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 - A Standard Tic Tac Toe Game in JS/html
 
-# Contents
+# Table of Contents
 * [Development](#development)
 * [Deployment](#deployment)
 * [Theme](#theme)
@@ -9,6 +9,7 @@
 * [Open Discussion](#open-discussion)
 * [Status](#status)
 
+[Back to top](#table-of-contents)
 ## Development
 - [ ] Sounds
   + [ ] Box Select
@@ -24,6 +25,7 @@
 - [ ] One player vs AI
 - [x] One player vs Two player
 
+[Back to top](#table-of-contents)
 ## Deployment
 - [x] Win 10
 - [ ] Win 10 mobile
@@ -31,20 +33,26 @@
 - [ ] Chromebook
 - [x] iPhone
 
+[Back to top](#table-of-contents)
 ## Theme
 - [ ] Responsive CSS
 - [ ] Color selection
 - [x] Plain template
 - [ ] Graphics
 
+[Back to top](#table-of-contents)
 ## Miscellaneous
 - [ ] Donation button
 - [ ] Credits page
 - [ ] Splash screen
 - [ ] Ads
 
+[Back to top](#table-of-contents)
 ## Open Discussion
 - Discussion announcements will be placed here
 
+[Back to top](#table-of-contents)
 ## Status
 ![Progress](https://progress-bar.dev/3/)
+
+[Back to top](#table-of-contents)
