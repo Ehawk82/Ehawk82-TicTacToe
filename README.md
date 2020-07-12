@@ -2,26 +2,26 @@
 - A Standard Tic Tac Toe Game in JS/html
 
 # Contents
-[Development](#development)
-[Deployment](#deployment)
-[Status](#status)
+### [Development](#development)
+### [Deployment](#deployment)
+### [Status](#status)
 
 ## Development
-- [] Leaderboard
+- [ ] Leaderboard
 - [x] End-game screen
   - [x] restart button
-  - [] shows leaderboard
+  - [ ] shows leaderboard
 - [x] Tie detection
 - [x] Win detection
-- [] AI
-- [] One player vs AI
+- [ ] AI
+- [ ] One player vs AI
 - [x] One player vs Two player
 
 ## Deployment
 - [x] Win 10
 - [x] Android mobile
-- [] Chromebook
+- [ ] Chromebook
 - [x] iPhone
 
 ## Status
-![Progress](https://progress-bar.dev/10/)
+![Progress](https://progress-bar.dev/2/)
