@@ -6,7 +6,7 @@
 * [Deployment](#deployment)
 * [Theme](#theme)
 * [Miscellaneous](#miscellaneous)
-* [Open Discussion](#discussion)
+* [Open Discussion](#open-discussion)
 * [Status](#status)
 
 ## Development
@@ -43,7 +43,7 @@
 - [ ] Splash screen
 - [ ] Ads
 
-## Open Discussion (#discussion)
+## Open Discussion (#open-discussion)
 - Discussion announcements will be placed here
 
 ## Status
