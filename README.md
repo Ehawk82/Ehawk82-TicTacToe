@@ -4,6 +4,7 @@
 # Contents
 * [Development](#development)
 * [Deployment](#deployment)
+* [Theme](#theme)
 * [Status](#status)
 
 ## Development
@@ -19,9 +20,15 @@
 
 ## Deployment
 - [x] Win 10
+- [ ] Win 10 mobile
 - [x] Android mobile
 - [ ] Chromebook
 - [x] iPhone
+
+## Theme
+- [ ] Responsive CSS
+- [ ] Color selection
+- [X] Plain template
 
 ## Status
 ![Progress](https://progress-bar.dev/2/)
