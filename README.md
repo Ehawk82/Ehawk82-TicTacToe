@@ -43,7 +43,7 @@
 - [ ] Splash screen
 - [ ] Ads
 
-## Open Discussion (#open-discussion)
+## Open Discussion
 - Discussion announcements will be placed here
 
 ## Status
