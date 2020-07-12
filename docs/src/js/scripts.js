@@ -1,7 +1,7 @@
 var myUI,player = "X",winStatus = false,cellCount = 9;
 
 
-myUI = {/*tds[0].innerHTML === "X" && tds[1].innerHTML === "X" && tds[2].innerHTML === "X"*/
+myUI = {
 	testX: function(tds,x,y,z,a){
 		if (tds[x].innerHTML === a && tds[y].innerHTML === a && tds[z].innerHTML === a) {
 			myUI.xWin();
