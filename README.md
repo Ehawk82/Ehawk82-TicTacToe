@@ -2,9 +2,9 @@
 - A Standard Tic Tac Toe Game in JS/html
 
 # Contents
-### [Development](#development)
-### [Deployment](#deployment)
-### [Status](#status)
+* [Development](#development)
+* [Deployment](#deployment)
+* [Status](#status)
 
 ## Development
 - [ ] Leaderboard
