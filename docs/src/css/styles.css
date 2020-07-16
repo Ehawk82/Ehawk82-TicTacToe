@@ -50,7 +50,8 @@ td {
 /*ID*/
 
 /*CLASS*/
-.blokker {
+
+.blokker, .statPage {
 	position: fixed;
 	display: grid;
 	top:0;

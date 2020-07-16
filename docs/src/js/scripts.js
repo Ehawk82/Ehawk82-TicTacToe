@@ -2,7 +2,11 @@ var myUI,
 	player = "X",
 	winStatus = false,
 	cellCount = 9;
-
+var stats = {
+	x: 0,
+	o: 0,
+	t: 0
+};
 myUI = {
 	all_tests: function(tds) { 
   		return [ 
@@ -26,7 +30,6 @@ myUI = {
 	},
 	runTest: function(tds,x,y,z,a){
 		if (tds[x].innerHTML === a && tds[y].innerHTML === a && tds[z].innerHTML === a) {
-			//myUI.xWin();
 			if(a == "X"){
 				myUI.xWin();
 			} else if(a == "O") {
@@ -39,11 +42,43 @@ myUI = {
 	bySelAll: function(x) {return document.querySelectorAll(x) },
 	init: function(){ 
 		setTimeout(function(){
-			myUI.loadout();
+			LSinit("records", stats);
+			var records = parseLS("records");
+			myUI.loadout(records);
 		},0);
 	},
-	loadout: function(){
-		var table = myUI.creEle("table"), playerLabel;
+	backFunc: function(statPage){
+		return function(){
+			statPage.remove();
+		}
+	},
+	statLoad: function(records){
+		return function(){
+			var statPage = myUI.creEle("div"),
+				xWins = myUI.creEle("div"),
+				oWins = myUI.creEle("div"),
+				ties = myUI.creEle("div"),
+				backOut = myUI.creEle("button");
+
+			backOut.innerHTML = "BACK";
+			backOut.onclick = myUI.backFunc(statPage);
+
+			xWins.innerHTML = "X Wins: " + records.x;
+			oWins.innerHTML = "O Wins: " + records.o;
+			ties.innerHTML = "Ties: " + records.t;
+
+			statPage.className = "statPage";
+			statPage.append(xWins,oWins,ties,backOut);
+
+			body.append(statPage);
+		}
+	},
+	loadout: function(records){
+		var table = myUI.creEle("table"), playerLabel,
+			statButton = myUI.creEle("button");
+
+		statButton.innerHTML = "View Stats";
+		statButton.onclick = myUI.statLoad(records);
 
 		playerLabel = myUI.creEle("div");
 		playerLabel.innerHTML = player + " turn";
@@ -64,11 +99,10 @@ myUI = {
 			table.append(tr);
 		}
 
-		body.append(table,playerLabel);
+		body.append(table,playerLabel,statButton);
 	},
 	boxSelect: function(td,playerLabel){
 		return function(){
-
 			if(player === "X"){
 				td.innerHTML = "X";
 				td.onclick = null;
@@ -96,6 +130,12 @@ myUI = {
 		};
 	},
 	xWin: function(){
+		var records = parseLS("records");
+
+		records.x++;
+
+		saveLS("records", records);
+
 		var blokker = myUI.creEle("div"),
 			btnOver = myUI.creEle("button");
 
@@ -109,6 +149,12 @@ myUI = {
 		body.append(blokker);
 	},
 	oWin: function(){
+		var records = parseLS("records");
+
+		records.o++;
+
+		saveLS("records", records);
+
 		var blokker = myUI.creEle("div"),
 			btnOver = myUI.creEle("button");
 
@@ -122,6 +168,12 @@ myUI = {
 		body.append(blokker);
 	},
 	tieGame: function(){
+		var records = parseLS("records");
+
+		records.x++;
+
+		saveLS("records", records);
+		
 		var blokker = myUI.creEle("div"),
 			btnOver = myUI.creEle("button");
 
