@@ -53,6 +53,6 @@
 
 [Back to top](#Tic-Tac-Toe)
 ## Status
-![Progress](https://progress-bar.dev/3/)
+![Progress](https://progress-bar.dev/5/)
 
 [Back to top](#Tic-Tac-Toe)
