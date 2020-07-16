@@ -15,7 +15,7 @@
   + [ ] Box Select
   + [ ] Victory sound for X
   + [ ] Victory sound for O
-- [ ] Leaderboard
+- [x] Rocords keeping
 - [x] End-game screen
   - [x] restart button
   - [ ] shows leaderboard
@@ -53,6 +53,6 @@
 
 [Back to top](#Tic-Tac-Toe)
 ## Status
-![Progress](https://progress-bar.dev/5/)
+![Progress](https://progress-bar.dev/6/)
 
 [Back to top](#Tic-Tac-Toe)
