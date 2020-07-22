@@ -170,7 +170,7 @@ myUI = {
 	tieGame: function(){
 		var records = parseLS("records");
 
-		records.x++;
+		records.t++;
 
 		saveLS("records", records);
 		
