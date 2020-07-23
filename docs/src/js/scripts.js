@@ -99,14 +99,8 @@ myUI = {
 	},
 	boxSelect: function(td,playerLabel){
 		return function(){
-			if(player === "X"){
-				td.innerHTML = "X";
-				player = "O";
-			} else if(player === "O"){
-				td.innerHTML = "O";
-				player = "X";
-			}
-
+         td.innerHTML = player;
+         player = (player === "X")? "O" : "X";
 			td.onclick = null;
 			playerLabel.innerHTML = player + " turn";
 			var tds = myUI.bySelAll("td");
@@ -132,7 +126,7 @@ myUI = {
 		saveLS("records", records);
 
 		const inset = (a === "t")? 'TIE GAME' : (a + ' WIN');
-		
+
 		con = `<p>${inset}</p>`;
 
 		var blokker = myUI.creEle("div"),
