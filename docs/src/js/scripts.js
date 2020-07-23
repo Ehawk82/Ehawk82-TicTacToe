@@ -131,11 +131,9 @@ myUI = {
 
 		saveLS("records", records);
 
-		if(a === "t"){
-			con = "<p>TIE GAME</p>"
-		} else {
-			con = "<p>" + a + " WIN</p>";
-		}
+		const inset = (a === "t")? 'TIE GAME' : (a + ' WIN');
+		
+		con = `<p>${inset}</p>`;
 
 		var blokker = myUI.creEle("div"),
 			btnOver = myUI.creEle("button");
