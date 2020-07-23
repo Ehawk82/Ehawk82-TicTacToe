@@ -30,11 +30,7 @@ myUI = {
 	},
 	runTest: function(tds,x,y,z,a){
 		if (tds[x].innerHTML === a && tds[y].innerHTML === a && tds[z].innerHTML === a) {
-			if(a == "X"){
-				myUI.xWin();
-			} else if(a == "O") {
-				myUI.oWin();
-			}
+			myUI.winFunc(a)
 ;			winStatus = true;
 		}
 	},
@@ -126,32 +122,14 @@ myUI = {
 
 		/* tie game */
 		if(cellCount === 0 && winStatus === false){
-			myUI.tieGame();
+			myUI.winFunc("t");
 		};
 	},
-	xWin: function(){
-		var records = parseLS("records");
+	winFunc: function(a){
+		var records = parseLS("records"),
+			aa = a.toLowerCase();
 
-		records.x++;
-
-		saveLS("records", records);
-
-		var blokker = myUI.creEle("div"),
-			btnOver = myUI.creEle("button");
-
-		btnOver.innerHTML = "PLAY AGAIN!"
-		btnOver.onclick = myUI.restart();
-
-		blokker.className = "blokker";
-		blokker.innerHTML = "<p>X WIN</p>";
-		blokker.append(btnOver);
-
-		body.append(blokker);
-	},
-	oWin: function(){
-		var records = parseLS("records");
-
-		records.o++;
+		records[aa]++;
 
 		saveLS("records", records);
 
@@ -162,26 +140,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "<p>O WIN</p>";
-		blokker.append(btnOver);
-
-		body.append(blokker);
-	},
-	tieGame: function(){
-		var records = parseLS("records");
-
-		records.t++;
-
-		saveLS("records", records);
-		
-		var blokker = myUI.creEle("div"),
-			btnOver = myUI.creEle("button");
-
-		btnOver.innerHTML = "PLAY AGAIN!";
-		btnOver.onclick = myUI.restart();
-
-		blokker.className = "blokker";
-		blokker.innerHTML = "<p>TIED!</p>";
+		blokker.innerHTML = "<p>" + a + " WIN</p>";
 		blokker.append(btnOver);
 
 		body.append(blokker);
