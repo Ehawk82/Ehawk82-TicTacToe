@@ -101,18 +101,16 @@ myUI = {
 		return function(){
 			if(player === "X"){
 				td.innerHTML = "X";
-				td.onclick = null;
 				player = "O";
-				playerLabel.innerHTML = player + " turn";
-				var tds = myUI.bySelAll("td");
 			} else if(player === "O"){
 				td.innerHTML = "O";
-				td.onclick = null;
 				player = "X";
-				playerLabel.innerHTML = player + " turn";
-				var tds = myUI.bySelAll("td");
 			}
-			
+
+			td.onclick = null;
+			playerLabel.innerHTML = player + " turn";
+			var tds = myUI.bySelAll("td");
+
 			myUI.evalBoard(tds);
 		}
 	},
@@ -127,11 +125,17 @@ myUI = {
 	},
 	winFunc: function(a){
 		var records = parseLS("records"),
-			aa = a.toLowerCase();
+			aa = a.toLowerCase(),con;
 
 		records[aa]++;
 
 		saveLS("records", records);
+
+		if(a === "t"){
+			con = "<p>TIE GAME</p>"
+		} else {
+			con = "<p>" + a + " WIN</p>";
+		}
 
 		var blokker = myUI.creEle("div"),
 			btnOver = myUI.creEle("button");
@@ -140,7 +144,7 @@ myUI = {
 		btnOver.onclick = myUI.restart();
 
 		blokker.className = "blokker";
-		blokker.innerHTML = "<p>" + a + " WIN</p>";
+		blokker.innerHTML = con;
 		blokker.append(btnOver);
 
 		body.append(blokker);
