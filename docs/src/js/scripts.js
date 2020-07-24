@@ -10,28 +10,18 @@ var stats = {
 myUI = {
 	all_tests: function(tds) { 
   		return [ 
-    		[0,1,2,"X"],
-    		[3,4,5,"X"],
-    		[6,7,8,"X"],
-    		[0,3,6,"X"],
-			[1,4,7,"X"],
-			[2,5,8,"X"],
-			[2,4,6,"X"],
-			[0,4,8,"X"],
-			[0,1,2,"O"],
-			[3,4,5,"O"],
-			[6,7,8,"O"],
-			[0,3,6,"O"],
-			[1,4,7,"O"],
-			[2,5,8,"O"],
-			[2,4,6,"O"],
-			[0,4,8,"O"]
+    		[0,1,2,"X"],[3,4,5,"X"],[6,7,8,"X"],
+            [0,3,6,"X"],[1,4,7,"X"],[2,5,8,"X"],
+			[2,4,6,"X"],[0,4,8,"X"],
+			[0,1,2,"O"],[3,4,5,"O"],[6,7,8,"O"],
+            [0,3,6,"O"],[1,4,7,"O"],[2,5,8,"O"],
+	        [2,4,6,"O"],[0,4,8,"O"]
   		].some( combo => myUI.runTest( tds, ...combo ) );
 	},
 	runTest: function(tds,x,y,z,a){
 		if (tds[x].innerHTML === a && tds[y].innerHTML === a && tds[z].innerHTML === a) {
-			myUI.winFunc(a)
-;			winStatus = true;
+			myUI.winFunc(a);
+			winStatus = true;
 		}
 	},
 	creEle: function(x) {return document.createElement(x) },
